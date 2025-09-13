@@ -112,38 +112,55 @@
     </section>
 
     <section>
-        <h2>Notícias Recentes</h2>
+    <h2>Notícias Recentes</h2>
 
-        <article>
+    <article itemscope itemtype="https://schema.org/NewsArticle">
             <h3 itemprop="headline">Semana Acadêmica 2025</h3>
-            <p itemprop="articleBody">A Faculdade Exemplo realizou sua tradicional Semana Acadêmica com palestras e workshops.</p>
-            <span itemprop="author">
-                <span itemprop="name" style="font-weight: bold;">Equipe de Comunicação - </span>
+            <p itemprop="articleBody">
+                A Faculdade Exemplo realizou sua tradicional Semana Acadêmica com palestras e workshops.
+            </p>
+            <span itemprop="author" itemscope itemtype="https://schema.org/Organization">
+                <span itemprop="name" style="font-weight: bold;">Equipe de Comunicação</span>
             </span>
-            <span itemprop="datePublished">Publicado em: 09 de Setembro de 2025</span>
+            <time itemprop="datePublished" datetime="2025-09-09">Publicado em: 09 de Setembro de 2025</time>
         </article>
 
-        <article>
+        <article itemscope itemtype="https://schema.org/NewsArticle">
             <h3 itemprop="headline">Parceria Internacional</h3>
-            <p itemprop="articleBody">Firmamos acordo com universidades estrangeiras para intercâmbio de alunos.</p>
-            <span itemprop="author">
-                <span itemprop="name" style="font-weight: bold;">Assessoria de Imprensa - </span>
+            <p itemprop="articleBody">
+                Firmamos acordo com universidades estrangeiras para intercâmbio de alunos.
+            </p>
+            <span itemprop="author" itemscope itemtype="https://schema.org/Organization">
+                <span itemprop="name" style="font-weight: bold;">Assessoria de Imprensa</span>
             </span>
-            <span itemprop="datePublished">Publicado em: 08 de Setembro de 2025</span>
+            <time itemprop="datePublished" datetime="2025-09-08">Publicado em: 08 de Setembro de 2025</time>
         </article>
     </section>
 
     <section>
-        <h2>Depoimentos</h2>
-        <blockquote>
-            <p>"A Faculdade Exemplo mudou minha vida. Hoje atuo em uma grande empresa graças à formação recebida."</p>
-            <footer>- Ex-Aluno</footer>
+    <h2>Depoimentos</h2>
+
+    <blockquote itemscope itemtype="https://schema.org/Review">
+            <p itemprop="reviewBody">
+                "A Faculdade Exemplo mudou minha vida. Hoje atuo em uma grande empresa graças à formação recebida."
+            </p>
+            <footer>
+                – <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <span itemprop="name">Ex-Aluno</span>
+                </span>
+            </footer>
         </blockquote>
-        <blockquote>
-            <p>"Professores qualificados e ótima estrutura. Recomendo a todos."</p>
-            <footer>- Aluna</footer>
+
+        <blockquote itemscope itemtype="https://schema.org/Review">
+            <p itemprop="reviewBody">
+                "Professores qualificados e ótima estrutura. Recomendo a todos."
+            </p>
+            <footer>
+                – <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <span itemprop="name">Aluna</span>
+                </span>
+            </footer>
         </blockquote>
-        <!-- Comentário 8 (SEO): Depoimentos não possuem dados estruturados (review schema) para melhorar destaque no Google -->
     </section>
 
     <section id="contato">
