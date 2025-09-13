@@ -53,6 +53,22 @@
             color: white;
             text-align: center;
         }
+
+        /* Esconder por padrão */
+        #confirmacao {
+            display: none;
+        }
+        
+        /* Mostra só quando for o destino da URL */
+        #confirmacao:target {
+            display: block;
+            margin-top: 20px;
+            background: #f0f8ff;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
     </style>
 </head>
 <body>
@@ -164,17 +180,26 @@
     </section>
 
     <section id="contato">
-        <h2>Fale Conosco</h2>
-        <form>
-            <label>Nome:</label><br>
-            <input type="text" name="nome"><br><br>
-            <label>Email:</label><br>
-            <input type="email" name="email"><br><br>
-            <textarea name="mensagem" rows="5" cols="30"></textarea><br><br>
-            <input type="submit" value="Enviar">
-        </form>
-        <!-- Comentário 9 (SEO): Formulário não possui página de obrigado (thank you page) indexável para rastreamento de conversões -->
-    </section>
+    <h2>Fale Conosco</h2>
+    <form action="#confirmacao" method="get">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="5" cols="30" required></textarea><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <div id="confirmacao">
+        <h3>✅ Obrigado pelo contato!</h3>
+        <p>Recebemos sua mensagem e retornaremos em breve.</p>
+    </div>
+</section>
+
 </main>
 
 <footer>
