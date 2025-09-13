@@ -15,7 +15,7 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             background: #f5f5f5;
         }
         header, nav, main, footer {
@@ -41,17 +41,66 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            /* Adição de imagem de funo ao banner */
+            background-image: url('src/banner_faculdade_exemplo.png'); 
+            background-size: cover;
+            background-position: center;
         }
-        section {
-            margin: 20px 0;
-            background: white;
-            padding: 15px;
-            border: 1px solid #ddd;
-        }
+
+        /* Estilizações do footer e da nav para demais opções: */
         footer {
-            background: #222;
+            background: #222; /* Fundo escuro conforme o original */
             color: white;
+            padding: 30px 20px; /* Mais padding para um visual espaçoso */
             text-align: center;
+            font-size: 0.9em;
+            border-top: 5px solid #0066cc; /* Linha superior azul para destaque */
+        }
+
+        /* Estilo para os parágrafos de contato */
+        footer p {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        /* Container para as navegações do rodapé */
+        .footer-navs-container {
+            display: flex;
+            justify-content: center; /* Centraliza os blocos de navegação */
+            flex-wrap: wrap;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        footer nav {
+            /* Removendo ou ajustando propriedades que causam o bloco azul */
+            background-color: transparent; /* Garante que não tenha cor de fundo */
+            flex: 1 1 auto; /* Permite que ocupe o espaço necessário, sem largura fixa */
+            max-width: 200px; /* Limita a largura para evitar que se estique demais */
+            margin: 0 20px; /* Espaço horizontal entre as navs */
+            text-align: center; /* Centraliza o texto dentro de cada nav */
+        }
+
+        footer nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer nav ul li {
+            margin-bottom: 8px;
+        }
+
+        footer nav ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer nav ul li a:hover {
+            color: #fff;
+            text-decoration: underline;
         }
 
         /* Esconder por padrão */
@@ -67,6 +116,171 @@
             padding: 15px;
             border: 1px solid #ccc;
             border-radius: 8px;
+        }
+
+        /* Estilizações gerais para Sections e seus elementos: */
+        .section {
+            margin: 20px 0;
+            background: white;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+        }
+
+        .section-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #4a6491;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        /* Estilizações gerais para formulário: */
+        label {
+            font-family: 'Segoe UI';
+            color: #2c3e50;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 30%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border: 1px solid #c5c5c5;
+            border-radius: 5px;
+            display: block;
+        }
+
+        input[type="submit"] {
+            background-color: #0066cc; 
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover { 
+            background-color: #004080; 
+        }
+
+        /* Estilizações para section de Notícias Recentes: */
+        article {
+            margin-bottom: 25px;
+            padding: 15px;
+            border-left: 4px solid #0066cc; 
+            background: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        article span, article time {
+            display: block;
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        article h3.section-subtitle {
+            margin-top: 0; 
+            margin-bottom: 10px; 
+            color: #004080; 
+        }
+
+        /* Estilizações para section de Infraestrutura: */
+
+        .gallery {
+            display: flex; /* Habilita o Flexbox */
+            gap: 10px;    /* Espaço entre as imagens */
+            margin-bottom: 20px; /* Espaço entre a galeria e o texto */
+            flex-wrap: wrap; /* Permite que as imagens quebrem a linha em telas menores */
+            justify-content: center; /* Centraliza as imagens na linha */
+        }
+
+        .gallery img {
+            width: calc(33.33% - 10px); /* Para 3 imagens, cada uma ocupa 1/3 menos o gap */
+            max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+            height: auto;
+            border-radius: 8px; /* Mantém o estilo arredondado */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Sombra para destacar */
+        }
+
+        /* Ajustes para texto da infraestrutura */
+        .p-text p {
+            line-height: 1.6; /* Aumenta o espaçamento entre linhas para melhor leitura */
+            margin-bottom: 15px; /* Espaço entre parágrafos */
+            font-size: 1.1em; /* Um pouco maior para ser mais legível */
+            color: #333;
+        }
+
+        /* Estilizações para lista de cursos: */
+        #cursos ul {
+            list-style: none; /* Remove os marcadores de lista padrão */
+            padding: 0;      /* Remove o padding padrão da lista */
+            margin: 20px 0;  /* Espaçamento acima e abaixo da lista */
+        }
+
+        #cursos li {
+            margin-bottom: 10px; /* Espaço entre cada item da lista */
+            font-size: 1.1em;    /* Tamanho de fonte um pouco maior */
+            background-color: #f5f5f5; /* Cor de fundo dos itens da lista */
+            border-left: 4px solid #0066cc; 
+        }
+
+        #cursos li a {
+            text-decoration: none; /* Remove o sublinhado dos links */
+            color: #0066cc;        /* Define uma cor azul para os links */
+            font-weight: 500;      /* Torna o texto um pouco mais encorpado */
+            transition: color 0.3s ease; /* Transição suave para o efeito hover */
+            display: block; /* Faz o link ocupar toda a largura do <li> para facilitar o clique */
+            padding: 5px 0; /* Adiciona um pequeno padding para a área clicável */
+            margin-left: 5px;
+        }
+
+        #cursos li a:hover {
+            color: #004080; /* Cor mais escura ao passar o mouse */
+            text-decoration: underline; /* Adiciona sublinhado no hover para feedback visual */
+        }
+
+        /* Estilizações de Depoimentos: */
+        #depoimentos-container blockquote {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            max-width: 60%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            flex-direction: column;
+        }
+
+        /* Estilo para o texto do depoimento */
+        #depoimentos-container blockquote p {
+            font-size: 1.15em;
+            font-style: italic;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* Estilo para o autor do depoimento */
+        #depoimentos-container blockquote footer {
+            font-size: 1em;
+            font-weight: bold;
+            color: #d8d8d8;
+            text-align: right; /* Alinha o nome à direita */
+            margin-top: auto; /* Empurra o nome para o final do card */
         }
 
     </style>
@@ -90,8 +304,8 @@
 </div>
 
 <main>
-    <section>
-        <h2>Quem Somos</h2>
+    <section class="section">
+        <h2 class="section-title">Quem Somos</h2>
         <p>A <strong>Faculdade Exemplo</strong> é uma <strong>instituição de ensino superior</strong> dedicada a transformar a vida de seus alunos. 
             Oferecemos <strong>cursos de graduação e pós-graduação</strong> com foco em inovação e na <strong>formação de profissionais</strong> 
             altamente qualificados para os desafios do mercado.</p>
@@ -99,8 +313,8 @@
             que prepara você para uma carreira de sucesso.</p>
     </section>
 
-    <section id="cursos">
-        <h2>Nossos Cursos</h2>
+    <section id="cursos" class="section">
+        <h2 class="section-title">Nossos Cursos</h2>
         <ul>
             <li><a href="administracao.html" target="_blank">Administração</a></li>
             <li><a href="ciencia_computacao.html" target="_blank">Ciência da Computação</a></li>
@@ -110,28 +324,39 @@
         </ul>
     </section>
 
-    <section id="sobre">
-        <h2>Infraestrutura</h2>
-        <img src="laboratorio.jpg" alt="Imagem principal da infraestrutura de laboratórios da Faculdade Exemplo">
-        <p>Nosso campus conta com biblioteca, laboratórios modernos e áreas de convivência.</p>
-        <p>Estamos sempre investindo em tecnologia e inovação.</p>
+    <section id="sobre" class="section">
+        <h2 class="section-title">Infraestrutura</h2>
+
+        <div class="gallery">
+            <img src="src/img_lab_faculdade.png" alt="Laboratórios modernos da Faculdade Exemplo">
+            <img src="src/img_biblioteca_faculdade.png" alt="Biblioteca espaçosa e moderna da Faculdade Exemplo">
+            <img src="src/img_convivencia_faculdade.png" alt="Área de convivência e lazer da Faculdade Exemplo">
+        </div>
+
+        <div class="p-text">
+            <p>Nosso campus conta com uma <strong>biblioteca</strong> completa, <strong>laboratórios modernos</strong> equipados com tecnologia de ponta e diversas <strong>áreas de convivência</strong> que promovem a interação e o bem-estar dos alunos.</p>
+            <p>Estamos sempre investindo em <strong>tecnologia e inovação</strong> para oferecer um ambiente de aprendizado dinâmico e preparar nossos estudantes para os desafios do futuro.</p>
+        </div>
     </section>
 
-    <section>
-        <h2>Corpo Docente de Excelência</h2>
-        <p>Nossa equipe de <strong>professores</strong> é formada por <strong>mestres e doutores</strong> com vasta 
-            <strong>experiência acadêmica e de mercado</strong>. São <strong>especialistas</strong> em suas áreas, com destaque para 
-            <strong>pesquisas em tecnologia da informação</strong>, <strong>gestão empresarial</strong> e <strong>novas tendências do direito</strong>.</p>
-        <p>O <strong>corpo docente</strong> é composto por profissionais que não apenas ensinam, mas também participam ativamente da 
-            <strong>comunidade científica</strong>, publicando artigos e conduzindo <strong>pesquisas inovadoras</strong> que garantem um 
-            aprendizado alinhado com as demandas do futuro.</p>
+    <section class="section">
+        <h2 class="section-title">Corpo Docente de Excelência</h2>
+
+        <div class="p-text">
+            <p>Nossa equipe de <strong>professores</strong> é formada por <strong>mestres e doutores</strong> com vasta 
+                <strong>experiência acadêmica e de mercado</strong>. São <strong>especialistas</strong> em suas áreas, com destaque para 
+                <strong>pesquisas em tecnologia da informação</strong>, <strong>gestão empresarial</strong> e <strong>novas tendências do direito</strong>.</p>
+            <p>O <strong>corpo docente</strong> é composto por profissionais que não apenas ensinam, mas também participam ativamente da 
+                <strong>comunidade científica</strong>, publicando artigos e conduzindo <strong>pesquisas inovadoras</strong> que garantem um 
+                aprendizado alinhado com as demandas do futuro.</p>
+        </div>
     </section>
 
-    <section>
-    <h2>Notícias Recentes</h2>
+    <section class="section">
+        <h2 class="section-title">Notícias Recentes</h2>
 
-    <article itemscope itemtype="https://schema.org/NewsArticle">
-            <h3 itemprop="headline">Semana Acadêmica 2025</h3>
+        <article itemscope itemtype="https://schema.org/NewsArticle">
+            <h3 itemprop="headline" class="section-subtitle">Semana Acadêmica 2025</h3>
             <p itemprop="articleBody">
                 A Faculdade Exemplo realizou sua tradicional Semana Acadêmica com palestras e workshops.
             </p>
@@ -142,7 +367,7 @@
         </article>
 
         <article itemscope itemtype="https://schema.org/NewsArticle">
-            <h3 itemprop="headline">Parceria Internacional</h3>
+            <h3 itemprop="headline" class="section-subtitle">Parceria Internacional</h3>
             <p itemprop="articleBody">
                 Firmamos acordo com universidades estrangeiras para intercâmbio de alunos.
             </p>
@@ -153,50 +378,30 @@
         </article>
     </section>
 
-    <section>
-    <h2>Depoimentos</h2>
+    <section class="section">
+    <h2 class="section-title">Depoimentos</h2>
+        <div id="depoimentos-container">
+            <blockquote itemscope itemtype="https://schema.org/Review">
+                <p itemprop="reviewBody">
+                    "A Faculdade Exemplo mudou minha vida. Hoje atuo em uma grande empresa graças à formação recebida."
+                </p>
+                <footer>
+                    – <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <span itemprop="name">Ex-Aluno</span>
+                    </span>
+                </footer>
+            </blockquote>
 
-    <blockquote itemscope itemtype="https://schema.org/Review">
-            <p itemprop="reviewBody">
-                "A Faculdade Exemplo mudou minha vida. Hoje atuo em uma grande empresa graças à formação recebida."
-            </p>
-            <footer>
-                – <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-                    <span itemprop="name">Ex-Aluno</span>
-                </span>
-            </footer>
-        </blockquote>
-
-        <blockquote itemscope itemtype="https://schema.org/Review">
-            <p itemprop="reviewBody">
-                "Professores qualificados e ótima estrutura. Recomendo a todos."
-            </p>
-            <footer>
-                – <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-                    <span itemprop="name">Aluna</span>
-                </span>
-            </footer>
-        </blockquote>
-    </section>
-
-    <section id="contato">
-        <h2>Fale Conosco</h2>
-        <form action="#confirmacao" method="get">
-            <label for="nome">Nome:</label><br>
-            <input type="text" id="nome" name="nome" required><br><br>
-
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="mensagem">Mensagem:</label><br>
-            <textarea id="mensagem" name="mensagem" rows="5" cols="30" required></textarea><br><br>
-
-            <input type="submit" value="Enviar">
-        </form>
-
-        <div id="confirmacao">
-            <h3>✅ Obrigado pelo contato!</h3>
-            <p>Recebemos sua mensagem e retornaremos em breve.</p>
+            <blockquote itemscope itemtype="https://schema.org/Review">
+                <p itemprop="reviewBody">
+                    "Professores qualificados e ótima estrutura. Recomendo a todos."
+                </p>
+                <footer>
+                    – <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <span itemprop="name">Aluna</span>
+                    </span>
+                </footer>
+            </blockquote>
         </div>
     </section>
 
@@ -207,13 +412,23 @@
     <p>Endereço: Rua da Educação, 123 - Cidade Exemplo</p>
     <p>Telefone: (00) 1234-5678</p>
 
-    <nav aria-label="Links institucionais">
-        <ul>
-            <li><a href="/sitemap.xml">Sitemap</a></li>
-            <li><a href="/politica-de-privacidade.html">Política de Privacidade</a></li>
-            <li><a href="/termos-de-uso.html">Termos de Uso</a></li>
-        </ul>
-    </nav>
+    <div class="footer-navs-container">
+        <nav aria-label="Links institucionais">
+            <ul>
+                <li><a href="/sitemap.xml">Sitemap</a></li>
+                <li><a href="/politica-de-privacidade.html">Política de Privacidade</a></li>
+                <li><a href="/termos-de-uso.html">Termos de Uso</a></li>
+            </ul>
+        </nav>
+
+        <nav aria-label="Redes sociais">
+            <ul>
+                <li><a href="https://www.facebook.com/faculdadeexemplo" target="_blank" rel="noopener">Facebook</a></li>
+                <li><a href="https://www.instagram.com/faculdadeexemplo" target="_blank" rel="noopener">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/school/faculdadeexemplo" target="_blank" rel="noopener">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </div>
 </footer>
 
 </body>
