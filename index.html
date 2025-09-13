@@ -304,6 +304,7 @@
 </div>
 
 <main>
+    
     <section class="section">
         <h2 class="section-title">Quem Somos</h2>
         <p>A <strong>Faculdade Exemplo</strong> é uma <strong>instituição de ensino superior</strong> dedicada a transformar a vida de seus alunos. 
@@ -313,6 +314,9 @@
             que prepara você para uma carreira de sucesso.</p>
     </section>
 
+    <!-- Seção: Nossos Cursos -->
+    <!-- Descrição: Apresenta a lista de cursos oferecidos pela faculdade. -->
+    <!-- Melhorias de SEO: Os links internos usam âncoras descritivas ("Administração", "Ciência da Computação") para melhorar a interligação do site. -->
     <section id="cursos" class="section">
         <h2 class="section-title">Nossos Cursos</h2>
         <ul>
@@ -324,6 +328,9 @@
         </ul>
     </section>
 
+    <!-- Seção: Infraestrutura -->
+    <!-- Descrição: Mostra a infraestrutura do campus com uma galeria de fotos. -->
+    <!-- Melhorias de SEO: As imagens possuem atributos "alt" com descrições relevantes, o que otimiza a busca por imagens e a acessibilidade. -->
     <section id="sobre" class="section">
         <h2 class="section-title">Infraestrutura</h2>
 
@@ -339,6 +346,9 @@
         </div>
     </section>
 
+    <!-- Seção: Corpo Docente -->
+    <!-- Descrição: Descreve o corpo de professores da instituição. -->
+    <!-- Melhorias de SEO: O texto foi otimizado com palavras-chave como "mestres", "doutores" e "pesquisas inovadoras" para atrair buscas relacionadas a qualificações acadêmicas. -->
     <section class="section">
         <h2 class="section-title">Corpo Docente de Excelência</h2>
 
@@ -352,6 +362,9 @@
         </div>
     </section>
 
+    <!-- Seção: Notícias Recentes -->
+    <!-- Descrição: Apresenta notícias e novidades da faculdade. -->
+    <!-- Melhorias de SEO: Os artigos foram marcados com o Schema.org (Microdata), que ajuda os buscadores a entenderem o tipo de conteúdo e o exibirem em rich snippets. -->
     <section class="section">
         <h2 class="section-title">Notícias Recentes</h2>
 
@@ -378,6 +391,9 @@
         </article>
     </section>
 
+    <!-- Seção: Depoimentos -->
+    <!-- Descrição: Apresenta avaliações de alunos sobre a faculdade. -->
+    <!-- Melhorias de SEO: Os depoimentos foram marcados com o Schema.org (Microdata) do tipo "Review", tornando-os elegíveis para a exibição de estrelas nos resultados de pesquisa do Google. -->
     <section class="section">
     <h2 class="section-title">Depoimentos</h2>
         <div id="depoimentos-container">
@@ -405,8 +421,36 @@
         </div>
     </section>
 
+    <!-- Seção: Fale Conosco -->
+    <!-- Descrição: Um formulário de contato para que os visitantes possam enviar mensagens à faculdade. -->
+    <!-- Melhorias de SEO: A otimização do formulário, incluindo o uso de labels e a validação de campos, melhora a experiência do usuário e a rastreabilidade das conversões. -->
+    <section id="contato" class="section">
+        <h2 class="section-title">Fale Conosco</h2>
+        <form action="#confirmacao" method="get">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" cols="30" required></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+
+        <div id="confirmacao">
+            <h3>✅ Obrigado pelo contato!</h3>
+            <p>Recebemos sua mensagem e retornaremos em breve.</p>
+        </div>
+    </section>
+
 </main>
 
+
+<!-- Seção: Rodapé -->
+<!-- Descrição: Contém informações de contato e links importantes. -->
+<!-- Melhorias de SEO: Inclui links essenciais para sitemap, política de privacidade e redes sociais, que fortalecem a autoridade do domínio e ajudam os motores de busca a entender a estrutura do site. -->
 <footer>
     <p>&copy; 2025 Faculdade Exemplo - Todos os direitos reservados</p>
     <p>Endereço: Rua da Educação, 123 - Cidade Exemplo</p>
